@@ -1,0 +1,46 @@
+@use 'font-face';
+@use 'color' as *;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Lora', 'ShadowsIntoLight', sans-serif;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $clr-text-second;
+    font-family: 'Lora', serif;
+    margin: 0 0 20px;
+}
+
+p,
+span {
+    color: $clr-text-primary;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 12px;
+}
+
+a {
+    color: $clr-text-primary;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $clr-text-active;
+}

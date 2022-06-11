@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+.products {
+    @include grid(250px, 1rem);
+    grid-column-gap: 2rem;
+    li {
+        list-style: none;
+    }
+}
+.product {
+    @include flex-col();
+    gap: 1rem 0;
+}

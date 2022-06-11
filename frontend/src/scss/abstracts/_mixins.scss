@@ -1,0 +1,28 @@
+@mixin border($width: 1px, $type: solid, $color: #ccc) {
+    border: $width $type $color;
+}
+
+@mixin flex-row($display: flex, $align: center, $justy: center, $wrap: nowrap) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justy;
+    flex-wrap: $wrap;
+}
+@mixin flex-col(
+    $display: flex,
+    $dir: column,
+    $align: flex-start,
+    $justy: space-between,
+    $wrap: nowrap
+) {
+    display: $display;
+    flex-direction: $dir;
+    align-items: $align;
+    justify-content: $justy;
+    flex-wrap: $wrap;
+}
+@mixin grid($value, $gap: 1rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    grid-gap: $gap;
+}
