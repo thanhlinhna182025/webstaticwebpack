@@ -4,7 +4,6 @@
     "description": "Swiper sass html css",
     "main": "index.html",
     "scripts": {
-        "dev": "npm run build && npm run serve",
         "serve": "webpack-dev-server --open",
         "build": "webpack --mode=development",
         "build:prod": "webpack --mode=production"
@@ -18,6 +17,7 @@
     "author": "thanhtruong",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.27.2",
         "jquery": "^3.6.0",
         "select2": "^4.1.0-rc.0",
         "swiper": "^8.1.4"

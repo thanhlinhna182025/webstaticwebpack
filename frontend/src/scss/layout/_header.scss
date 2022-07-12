@@ -1,14 +1,16 @@
 @use '../abstracts' as *;
 .header {
     grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-row($justify: space-between);
     padding: 1rem;
-    @include border;
     .brand {
         a {
             font-size: fz(fz50);
+        }
+    }
+    .nav{
+        a{
+            margin-right: 1rem;
         }
     }
 }

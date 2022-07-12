@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.3);
+    font-size: 2rem;
+    font-weight: 700;
+    &.active {
+        @include flex-row();
+        .message-overlay-wrapper {
+            background-color: #fff;
+            width: 30%;
+            min-height: 20vh;
+            @include flex-col($align: center, $justify: center);
+            gap: 1rem;
+            @include border();
+            border-radius: 0.5rem;
+            padding: 1rem;
+            .message-overlay-content {
+                color: $clr-warning;
+            }
+        }
+    }
+}

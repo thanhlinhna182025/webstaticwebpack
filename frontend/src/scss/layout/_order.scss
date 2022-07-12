@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+.order {
+    @include flex-row($justify: space-between, $align: flex-start);
+    gap: 5rem;
+
+    .order-info {
+        flex: 1 1 60rem;
+        @include border();
+        padding: 3rem;
+        border-radius: 0.5rem;
+
+        .cart-list-container {
+            list-style-type: none;
+            li {
+                @include flex-row($justify: space-between);
+            }
+            .cart-wapper {
+                border-top: 1px solid #ccc;
+                padding: 2rem;
+            }
+        }
+    }
+    .order-action {
+        flex: 1 1 20rem;
+        @include border();
+        border-radius: 0.5rem;
+        padding: 3rem;
+        ul {
+            list-style-type: none;
+            @include flex-col();
+            gap: 2rem;
+            li {
+                @include flex-row($justify: space-between, $align: flex-start);
+                width: 100%;
+            }
+        }
+    }
+}

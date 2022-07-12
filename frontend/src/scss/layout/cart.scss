@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+.cart {
+    @include flex-row($justify: space-between, $align: flex-start);
+    gap: 5rem;
+    padding: 5rem 10rem;
+    @include border();
+    .cart-list {
+        flex: 2 1;
+        .cart-list-container {
+            list-style-type: none;
+            @include flex-col();
+            li {
+                @include flex-row();
+                width: 100%;
+                .cart-image,
+                .cart-info {
+                    flex: 1 1;
+                    padding: 2rem;
+                }
+                .cart-image {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .cart-action {
+        flex: 1 1;
+    }
+}

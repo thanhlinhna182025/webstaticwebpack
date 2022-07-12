@@ -2,27 +2,41 @@
     border: $width $type $color;
 }
 
-@mixin flex-row($display: flex, $align: center, $justy: center, $wrap: nowrap) {
+@mixin flex-row(
+    $display: flex,
+    $dir: row,
+    $align: center,
+    $justify: center,
+    $wrap: nowrap
+) {
     display: $display;
     align-items: $align;
-    justify-content: $justy;
+    justify-content: $justify;
     flex-wrap: $wrap;
+    flex-direction: $dir;
 }
 @mixin flex-col(
     $display: flex,
     $dir: column,
     $align: flex-start,
-    $justy: space-between,
+    $justify: space-between,
     $wrap: nowrap
 ) {
     display: $display;
     flex-direction: $dir;
+    flex-direction: column;
     align-items: $align;
-    justify-content: $justy;
+    justify-content: $justify;
     flex-wrap: $wrap;
 }
 @mixin grid($value, $gap: 1rem) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
     grid-gap: $gap;
+}
+@mixin m-shadow($color: #888) {
+    box-shadow: 5px 10px 10px $color;
+}
+@mixin l-shadow($color: #888) {
+    box-shadow: 20px 10px 10px $color;
 }

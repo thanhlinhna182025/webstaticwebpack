@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+.dashboard {
+    @include flex-row($justify: space-between, $align: flex-start);
+    gap: 2rem;
+    background-color: rgb(255, 251, 255);
+}

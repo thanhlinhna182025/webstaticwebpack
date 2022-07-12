@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+.checkout-steps {
+    @include flex-row($justify: space-between);
+    width: 50rem;
+    margin: 2rem auto;
+
+    div {
+        border-top: 0.5rem solid $clr-gray;
+        flex: 1 1;
+        color: $clr-info;
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 2rem;
+        &.active {
+            color: $clr-success;
+            border-top-color: $clr-success;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use '../abstracts/' as *;
+
+.form-container {
+    form {
+        width: 50%;
+        margin: 0 auto;
+        @include border();
+        ul {
+            list-style-type: none;
+            @include flex-col();
+            gap: 2rem;
+            padding: 2rem;
+            li {
+                list-style-type: none;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .form-item {
+                width: 100%;
+                input {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #ccc;
+                    outline: none;
+                    font-size: 2rem;
+                }
+                textarea {
+                    width: 100%;
+                    min-height: 10rem;
+                    outline: none;
+                    font-size: 2rem;
+                    @include border();
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+}
+.fw {
+    width: 100%;
+}

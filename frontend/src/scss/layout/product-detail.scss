@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+.product {
+    @include flex-row($align: center, $justify: space-between);
+    width: 100%;
+    gap: 5rem;
+    margin-bottom: 5rem;
+    @include border;
+    .product-image,
+    .product-info {
+        flex: 1;
+    }
+    .product-image {
+        width: 100%;
+        padding: 2rem 5rem;
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .product-info {
+        @include flex-row();
+        gap: 2rem;
+    }
+}
+.active-star {
+    color: $clr-star;
+}
+.evaluation {
+    @include flex-row($justify: space-between, $align: flex-start);
+    width: 100%;
+    gap: 2rem;
+    .comment {
+        flex: 1 1;
+    }
+    .form-container {
+        flex: 1 1;
+        form {
+            @include flex-col();
+            width: 100%;
+            gap: 2rem 0;
+            padding: 1rem;
+            h6 {
+                font-size: 2rem;
+                font-weight: 500;
+                margin: 0;
+            }
+            textarea {
+                @include border();
+                outline: none;
+                border-radius: 5px;
+                width: 100%;
+                min-height: 10rem;
+            }
+        }
+    }
+}
+
+.rating {
+   width: 180px;
+}
+
+.rating__star {
+   cursor: pointer;
+   color: $clr-star
+}
+

@@ -31,6 +31,7 @@ const htmlPlugins = generateHtmlPlugins('./src/pages');
 
 module.exports = {
     mode: 'development',
+    watch: true,
     entry: {
         main: ['./src/js/main.js', './src/js/about.js'],
     },

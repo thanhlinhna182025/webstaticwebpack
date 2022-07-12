@@ -16,29 +16,31 @@ body {
     font-size: 1.6rem;
     margin: 0;
 }
+ul,
+li {
+    margin: 0;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
     color: $clr-text-second;
     font-family: 'Lora', serif;
     margin: 0 0 20px;
+    font-size: 4rem;
+    line-height: 5.2rem;
 }
 
 p,
 span {
     color: $clr-text-primary;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 36px;
     margin: 0 0 12px;
 }
 
 a {
     color: $clr-text-primary;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {

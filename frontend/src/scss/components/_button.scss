@@ -1,0 +1,16 @@
+@use '../base/' as *;
+
+.btn {
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    font-size: 2rem;
+    color: $clr-text-second;
+    font-weight: 500;
+    min-width: 20rem;
+}
+.btn--radius {
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: $Vegetables-2;
+}

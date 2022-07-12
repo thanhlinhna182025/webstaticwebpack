@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.form-product {
+    width: 100%;
+    form {
+        @include flex-col();
+        @include border();
+        gap: 1rem;
+        width: 50%;
+        padding: 3rem;
+        .form-group {
+            @include flex-col();
+            width: 100%;
+            input,
+            textarea {
+                width: 100%;
+                outline: none;
+                padding: 0.5rem;
+                @include border();
+                border-radius: 3px;
+            }
+            textarea {
+                min-height: 10rem;
+            }
+        }
+    }
+}

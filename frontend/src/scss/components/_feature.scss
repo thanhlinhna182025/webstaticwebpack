@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+.feature {
+    @include flex-row($justify: space-between);
+    width: 100%;
+    gap: 2rem;
+    .feature-item {
+        flex: 1 1 30rem;
+        @include flex-col($align: center);
+        @include border();
+        @include m-shadow();
+        border-radius: 0.5rem;
+        h6 {
+            font-size: 2rem;
+            margin: 1rem;
+        }
+        span{
+            font-size: 2.4rem;
+            color:$clr-info;
+        }
+    }
+}

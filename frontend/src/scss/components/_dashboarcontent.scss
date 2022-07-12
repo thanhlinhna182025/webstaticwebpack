@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+.dashboard-content {
+    flex: 4 1 80rem;
+    @include flex-col();
+    gap: 2rem;
+    padding: 1rem;
+}

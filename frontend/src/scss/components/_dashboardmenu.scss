@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    flex: 1 1 20rem;
+    h3 {
+        color: $clr-gray;
+        margin: 1rem 0;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            &:hover {
+                background-color: $clr-light;
+            }
+            i {
+                font-weight: 900;
+                color: $clr-info;
+            }
+            a {
+                color: $clr-gray;
+                margin-left: 0.5rem;
+                font-weight: 700;
+                &:hover {
+                    color: $clr-success;
+                }
+            }
+        }
+    }
+}
